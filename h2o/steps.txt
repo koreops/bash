@@ -1,0 +1,10 @@
+###############
+# use source packages for both packages numpy and then scipy
+###############
+# packages both depend on many dependecies
+# ensure all are install first
+# wget the source package
+# extract the package and install the files
+# ensure all dependecies are installed in the virtualenv?
+# then run the package and install it from an egg file?
+# create egg files with the required dependencies inside?
