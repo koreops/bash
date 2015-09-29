@@ -8,3 +8,5 @@
 # ensure all dependecies are installed in the virtualenv?
 # then run the package and install it from an egg file?
 # create egg files with the required dependencies inside?
+# 
+# www.scipy.org/scipylib/building/linux.html
