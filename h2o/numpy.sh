@@ -1,4 +1,5 @@
 #!/bin/bash
+# NumPy Package Install
 #####################################
 # Check to see if required packages for NumPy and SciPy are installed || Also NumPy should be installed before SciPY as NumPy is a requirement for SciPy
 ##############################################################
@@ -11,6 +12,8 @@ for pkg in $DEP; do
     else 
         echo "Error while installing $pkg"
     fi
-
-# NumPy Package Install
-# wget http://archive.ubuntu.com/ubuntu/pool/main/p/python-numpy/python-numpy_1.8.1.orig.tar.gz
+done
+# grab the source file for the package
+wget -nc http://archive.ubuntu.com/ubuntu/pool/main/p/python-numpy/python-numpy_1.6.1.orig.tar.gz
+# untar the package and build it into the virtualenv
+tar -zxf python-numpy_1.6.1.orig.tar.gz
