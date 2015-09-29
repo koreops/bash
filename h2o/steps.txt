@@ -10,3 +10,13 @@
 # create egg files with the required dependencies inside?
 # 
 # www.scipy.org/scipylib/building/linux.html
+#
+# install the depends sudo apt-get install gcc gfortran python-dev libblas-dev liblapack-dev cython
+#
+# do python setup.py build on the file 
+# 
+# then do a python setup.py install --prefix=$HOME/local   --- path to dir where to install usually like virtualenv 
+# 
+# make an egg file from the stuff created?
+#
+# 
