@@ -5,7 +5,7 @@
 # Check to see if required packages for NumPy and SciPy are installed || Also NumPy should be installed before SciPY as NumPy is a requirement for SciPy
 # This will install any missing packages to the local environment globally
 #
-DEP="gcc gfortran python-dev python-setuptools libblas-dev liblapack-dev cython"
+DEP="gcc g++ gfortran python-dev python-setuptools libblas-dev liblapack-dev cython"
 for pkg in $DEP; do
     if dpkg --get-selections | grep -q "^$pkg[[:space:]]*install$" >/dev/null; then
         echo -e "$pkg is installed"
@@ -19,9 +19,10 @@ done
 wget -nc http://archive.ubuntu.com/ubuntu/pool/main/p/python-numpy/python-numpy_1.6.1.orig.tar.gz
 tar -zxf python-numpy_1.6.1.orig.tar.gz
 ##
-# Build the .egg package for NumPy
+# Build the .egg package for NumPy & install as requirement for build the SciPy .egg package
 cd numpy-1.6.1 &&
 python ./setupegg.py bdist_egg
+python ./setup.py install
 # Grab source package SciPy
 cd .. &&
 wget -nc http://archive.ubuntu.com/ubuntu/pool/universe/p/python-scipy/python-scipy_0.9.0+dfsg1.orig.tar.gz
