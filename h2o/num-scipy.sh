@@ -33,13 +33,7 @@ python ./setupegg.py bdist_egg
 # The binary .egg files will be located in the respective dist folders within each extracted directory
 # Little bit of cleanup
 cd .. &&
-rm python-numpy_1.6.1.orig.tar.gz
-rm python-scipy_0.9.0+dfsg1.orig.tar.gz
-
-cd numpy-1.6.1/dist && 
-cp numpy-1.6.1-py2.7-linux-x86_64.egg ../../
-cd ../../ &&
-cd scipy-0.9.0.orig/dist &&
-cp scipy-0.9.0-py2.7-linux-x86_64.egg ../../
-cd ../../ &&
-rm -rf numpy-1.6.1 scipy-0.9.0.orig
+rm -rf *.tar.gz
+cd numpy-1.6.1/dist && cp numpy-1.6.1-py2.7-linux-x86_64.egg ../../
+cd ../../ && cd scipy-0.9.0.orig/dist && cp scipy-0.9.0-py2.7-linux-x86_64.egg ../../
+cd ../../ && rm -rf numpy-1.6.1 scipy-0.9.0.orig
