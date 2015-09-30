@@ -19,7 +19,7 @@ done
 wget -nc http://archive.ubuntu.com/ubuntu/pool/main/p/python-numpy/python-numpy_1.6.1.orig.tar.gz
 tar -zxf python-numpy_1.6.1.orig.tar.gz
 ##
-# Build the .egg package for NumPy & install as requirement for build the SciPy .egg package
+# Build the .egg package for NumPy & install as requirement for building the SciPy .egg package
 cd numpy-1.6.1 &&
 python ./setupegg.py bdist_egg
 python ./setup.py install
